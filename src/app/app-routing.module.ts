@@ -7,7 +7,15 @@ const routes: Routes = [
     loadChildren: () => {
       return import('./auth/auth.module').then((m) => m.AuthModule);
     },
-  }
+  },
+  {
+    path: 'dragons',
+    loadChildren: () => {
+      return import('./modules/dragons/dragons.module').then(
+        (m) => m.DragonsModule
+      );
+    },
+  },
 ];
 
 @NgModule({
