@@ -1,0 +1,32 @@
+<div>
+  <div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" formControlName="name" />
+
+        <div
+          *ngIf="submitted && form.controls['name'].errors"
+          class="invalid-feedback"
+        >
+          <div *ngIf="form.controls['name'].errors">Name is required</div>
+        </div>
+      </div>
+      <div>
+        <label for="type">Type:</label>
+        <input type="text" formControlName="type" />
+
+        <div
+          *ngIf="submitted && form.controls['type'].errors"
+          class="invalid-feedback"
+        >
+          <div *ngIf="form.controls['type'].errors">Type is required</div>
+        </div>
+      </div>
+
+      <div>
+        <button>Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
