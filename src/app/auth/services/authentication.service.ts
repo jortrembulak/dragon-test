@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
 import { LocalStorageService } from './local-storage.service';
@@ -7,7 +8,10 @@ import { LocalStorageService } from './local-storage.service';
   providedIn: 'root',
 })
 export class AuthenticationService {
-  constructor(private localStorageService: LocalStorageService) {}
+  constructor(
+    private localStorageService: LocalStorageService,
+    private router: Router
+  ) {}
 
   validateUser(user: User): Observable<any> {
     return new Observable((observer) => {
@@ -38,5 +42,6 @@ export class AuthenticationService {
 
   logOut(): void {
     this.localStorageService.delete('user');
+    this.router.navigate(['']);
   }
 }

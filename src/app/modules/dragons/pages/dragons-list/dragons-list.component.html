@@ -1,0 +1,34 @@
+<button (click)="add()">Add</button>
+<button (click)="add()">Add</button>
+
+<table>
+  <thead>
+    <tr>
+      <td>Data de criação</td>
+      <td>Nome</td>
+      <td>Tipo</td>
+      <td colspan="3">Ações</td>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngIf="dragons">
+      <tr *ngIf="dragons.length == 0">
+        <td [attr.colspan]="3" class="text-center">
+          Nenhum registro encontrado
+        </td>
+      </tr>
+    </ng-container>
+    <ng-container *ngFor="let row of dragons | orderBy: 'name'">
+      <tr>
+        <td>{{ row.createdAt | date: "dd/MM/yyyy HH:mm:ss" }}</td>
+        <td>{{ row.name }}</td>
+        <td>{{ row.type }}</td>
+        <td (click)="view(row.id)">Vizualisar</td>
+        <td (click)="edit(row.id)">Editar</td>
+        <td (click)="delete(row.id)">Deletar</td>
+      </tr>
+    </ng-container>
+
+    <tr></tr>
+  </tbody>
+</table>

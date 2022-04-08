@@ -1,3 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~sass/variables";
 @import "assets/css/reset.css";
+@import "~sass/scrollbar";
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-gray-five);
+  color: var(--color-white);
+  padding: 10px;
+  cursor: pointer;
+}

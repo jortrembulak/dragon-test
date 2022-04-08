@@ -1,0 +1,23 @@
+/* Scroll Bar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gray-three);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-gray-one);
+  border-radius: 2px;
+  transform: rotate(90deg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-gray-three);
+  border-radius: 2px;
+  transform: rotate(90.19deg);
+}
+/*End ScrollBar */
