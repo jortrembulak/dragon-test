@@ -1,0 +1,35 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-one: #f7f7f7;
+  --color-gray-two: #e5e5e5;
+  --color-gray-three: #c2c2c2;
+  --color-gray-four: #707070;
+  --color-gray-five: #383838;
+
+  --color-success: #249d41;
+  --color-error: #d33131;
+
+  --font-family-base: "PF Square Sans Pro", sans-serif;
+
+  --font-size-xxxs: 10px;
+  --font-size-xxs: 12px;
+  --font-size-xs: 13px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-regular2: 500;
+  --font-weight-bold: 700;
+
+  --shadow-level-1: 2px 2px 4px rgba(0, 0, 0, 0.16);
+  --shadow-level-2: 0px 2px 12px rgba(0, 0, 0, 0.12);
+
+  --border-radius-none: 0px;
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 8px;
+}
