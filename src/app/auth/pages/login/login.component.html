@@ -5,7 +5,7 @@
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div>
         <label for="username">Matricula</label>
-        <input type="text" formControlName="username" />
+        <input type="text" formControlName="username" autocomplete="username" />
         <div
           *ngIf="submitted && loginForm.controls['username'].errors"
           class="invalid-feedback"
@@ -17,7 +17,11 @@
       </div>
       <div>
         <label for="password">Senha</label>
-        <input type="{{ typeInput }}" formControlName="password" />
+        <input
+          type="{{ typeInput }}"
+          formControlName="password"
+          autocomplete="current-password"
+        />
         <img
           class="img-input"
           (click)="showPassword()"

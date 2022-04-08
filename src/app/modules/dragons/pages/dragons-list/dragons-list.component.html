@@ -1,13 +1,20 @@
-<button (click)="add()">Add</button>
-<button (click)="add()">Add</button>
+<div class="page-header">
+  <p>Dragons - List</p>
+  <div class="page-header__actions">
+    <button (click)="add()"><i class="fa-solid fa-plus"></i> Add</button>
+    <button (click)="logout()">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+    </button>
+  </div>
+</div>
 
 <table>
   <thead>
     <tr>
-      <td>Data de criação</td>
-      <td>Nome</td>
-      <td>Tipo</td>
-      <td colspan="3">Ações</td>
+      <th>Data de criação</th>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th colspan="3">Ações</th>
     </tr>
   </thead>
   <tbody>
@@ -23,9 +30,17 @@
         <td>{{ row.createdAt | date: "dd/MM/yyyy HH:mm:ss" }}</td>
         <td>{{ row.name }}</td>
         <td>{{ row.type }}</td>
-        <td (click)="view(row.id)">Vizualisar</td>
-        <td (click)="edit(row.id)">Editar</td>
-        <td (click)="delete(row.id)">Deletar</td>
+        <td class="table-action">
+          <a (click)="view(row.id)">
+            <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+          </a>
+          <a (click)="edit(row.id)">
+            <fa-icon [icon]="faPenToSquare"></fa-icon>
+          </a>
+          <a (click)="delete(row.id)">
+            <fa-icon [icon]="faTrashCan"></fa-icon>
+          </a>
+        </td>
       </tr>
     </ng-container>
 

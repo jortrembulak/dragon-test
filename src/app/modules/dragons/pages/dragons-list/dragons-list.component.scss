@@ -1,0 +1,40 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--color-gray-three);
+
+  &__actions {
+    width: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+table {
+  width: 100%;
+
+  tr:hover {
+    background: var(--color-gray-one);
+  }
+
+  th {
+    text-align: center;
+    background-color: var(--color-gray-four);
+    color: var(--color-white);
+  }
+
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid var(--color-gray-two);
+  }
+
+  .table-action {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+}

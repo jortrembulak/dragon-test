@@ -3,6 +3,11 @@
 @import "assets/css/reset.css";
 @import "~sass/scrollbar";
 
+body {
+  font-family: var(--font-family-base);
+  font-weight: normal;
+}
+
 button {
   outline: none;
   border: none;

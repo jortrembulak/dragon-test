@@ -3,15 +3,34 @@ import { Router } from '@angular/router';
 import { Dragons } from '../../models/dragons';
 import { DragonsService } from '../../services/dragons.service';
 
+import {
+  faTrashCan,
+  faPenToSquare,
+  faMagnifyingGlass,
+  faArrowRightFromBracket,
+  faPlus,
+} from '@fortawesome/free-solid-svg-icons';
+import { AuthenticationService } from 'src/app/auth/services/authentication.service';
+
 @Component({
   selector: 'app-dragons-list',
   templateUrl: './dragons-list.component.html',
   styleUrls: ['./dragons-list.component.scss'],
 })
 export class DragonsListComponent implements OnInit {
+  faTrashCan = faTrashCan;
+  faPlus = faPlus;
+  faPenToSquare = faPenToSquare;
+  faMagnifyingGlass = faMagnifyingGlass;
+  faArrowRightFromBracket = faArrowRightFromBracket;
+
   public dragons!: Dragons;
 
-  constructor(private dragonsService: DragonsService, private router: Router) {}
+  constructor(
+    private dragonsService: DragonsService,
+    private router: Router,
+    private authenticationService: AuthenticationService
+  ) {}
 
   ngOnInit() {
     this.getAllDragons();
@@ -46,6 +65,10 @@ export class DragonsListComponent implements OnInit {
       },
       error: (err) => console.log(err),
     });
+  }
+
+  logout() {
+    this.authenticationService.logOut();
   }
 
   private removeFromList(id: string): void {
