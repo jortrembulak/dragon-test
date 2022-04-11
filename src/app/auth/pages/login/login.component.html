@@ -1,11 +1,15 @@
-<div class="login">
-  <div class="login__left-side"></div>
-
-  <div class="login__right-side">
+<div class="container">
+  <div class="container__box">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div>
-        <label for="username">Matricula</label>
-        <input type="text" formControlName="username" autocomplete="username" />
+        <label for="username">User name</label>
+        <input
+          type="text"
+          formControlName="username"
+          autocomplete="username"
+          aria-required="true"
+          placeholder="User name"
+        />
         <div
           *ngIf="submitted && loginForm.controls['username'].errors"
           class="invalid-feedback"
@@ -16,11 +20,14 @@
         </div>
       </div>
       <div>
-        <label for="password">Senha</label>
+        <label for="password">Password</label>
         <input
           type="{{ typeInput }}"
           formControlName="password"
           autocomplete="current-password"
+          aria-required="true"
+          class="icon"
+          placeholder="Password"
         />
         <img
           class="img-input"
@@ -41,7 +48,7 @@
         <p>{{ errorMessage }}</p>
       </div>
       <div>
-        <button>Acessar</button>
+        <button type="submit">Join</button>
       </div>
     </form>
   </div>
