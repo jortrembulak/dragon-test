@@ -35,7 +35,6 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
 
     if (this.loginForm.invalid) {
-      alert('Attention! There are some fields required.');
       return;
     }
 

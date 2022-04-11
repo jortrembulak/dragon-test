@@ -36,7 +36,6 @@ export class DragonsAddComponent implements OnInit {
     this.submitted = true;
 
     if (this.form.invalid) {
-      alert('Attention! There are some fields required.');
       return;
     }
 
@@ -49,5 +48,9 @@ export class DragonsAddComponent implements OnInit {
         this.errorMessage = error.message;
       },
     });
+  }
+
+  onCancel(): void {
+    this.router.navigate(['dragons/dragons-list']);
   }
 }
