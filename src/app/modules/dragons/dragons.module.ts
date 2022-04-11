@@ -9,6 +9,7 @@ import { OrderByPipe } from 'src/app/shared/pipes/orderBy.pipe';
 import { DragonsListComponent } from './pages/dragons-list/dragons-list.component';
 import { DragonsAddComponent } from './pages/dragons-add/dragons-add.component';
 import { DragonsEditComponent } from './pages/dragons-edit/dragons-edit.component';
+import { DragonsInfoComponent } from './pages/dragons-info/dragons-info.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { DragonsEditComponent } from './pages/dragons-edit/dragons-edit.componen
     DragonsListComponent,
     DragonsAddComponent,
     DragonsEditComponent,
+    DragonsInfoComponent,
     OrderByPipe,
   ],
 })

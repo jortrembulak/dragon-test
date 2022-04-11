@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="container__box">
+    <h1>Dragon's information</h1>
+    <ul>
+      <li>Id: {{ dragon.id }}</li>
+      <li>Name: {{ dragon.name }}</li>
+      <li>Type : {{ dragon.type }}</li>
+      <li>Created at: {{ dragon.createdAt | date: "dd/MM/yyyy HH:mm:ss" }}</li>
+    </ul>
+
+    <div class="container__box__buttons">
+      <button type="button" (click)="onCancel()">Back</button>
+    </div>
+  </div>
+</div>
