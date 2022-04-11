@@ -50,8 +50,6 @@ export class DragonsService {
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
 
-    window.alert(errorMessage);
-
     return throwError(() => new Error(errorMessage));
   }
 }

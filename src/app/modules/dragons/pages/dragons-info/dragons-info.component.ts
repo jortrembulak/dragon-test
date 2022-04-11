@@ -1,7 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Dragon } from '../../models/dragons';
-import { DragonsService } from '../../services/dragons.service';
 
 @Component({
   selector: 'app-dragons-info',
@@ -9,22 +8,12 @@ import { DragonsService } from '../../services/dragons.service';
   styleUrls: ['./dragons-info.component.scss'],
 })
 export class DragonsInfoComponent implements OnInit {
-  public dragon!: Dragon;
+  public dragon!: Dragon | any;
 
-  constructor(
-    private dragonsService: DragonsService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
-    const id = this.route.snapshot.params['id'];
-    this.dragonsService.getById(id).subscribe({
-      next: (ret: Dragon) => (this.dragon = ret),
-      error: () => {
-        this.router.navigate(['dragons/dragons-list']);
-      },
-    });
+    this.dragon = this.route.snapshot.data['dragons'];
   }
 
   onCancel(): void {

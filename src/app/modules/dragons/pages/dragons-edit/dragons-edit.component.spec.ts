@@ -1,9 +1,15 @@
 /* tslint:disable:no-unused-variable */
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { Routes } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
+import { DragonsListComponent } from '../dragons-list/dragons-list.component';
 import { DragonsEditComponent } from './dragons-edit.component';
+
+const routes: Routes = [
+  { path: 'dragons/dragons-list', component: DragonsListComponent },
+];
 
 describe('DragonsEditComponent', () => {
   let component: DragonsEditComponent;
@@ -11,9 +17,14 @@ describe('DragonsEditComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DragonsEditComponent ]
-    })
-    .compileComponents();
+      declarations: [DragonsEditComponent],
+      imports: [
+        ReactiveFormsModule,
+        RouterTestingModule.withRoutes(routes),
+        HttpClientTestingModule,
+      ],
+      providers: [FormBuilder],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

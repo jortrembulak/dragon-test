@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     this.createForm();
   }
 
-  onSubmit() {
+  onSubmit(): void {
     this.submitted = true;
 
     if (this.loginForm.invalid) {
@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  showPassword() {
+  showPassword(): void {
     this.password = !this.password;
     this.typeInput = this.password ? 'password' : 'text';
   }

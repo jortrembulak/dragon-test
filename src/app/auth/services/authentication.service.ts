@@ -16,13 +16,13 @@ export class AuthenticationService {
   validateUser(user: User): Observable<any> {
     return new Observable((observer) => {
       if (user.username == 'Dragon' && user.password == 'myDragon') {
-        this.localStorageService.set('user', user);
-        observer.next({ message: 'Login feito com sucesso' });
+        this.setUser(user);
+        observer.next({ message: 'Logged with Success' });
 
         return observer.complete();
       } else {
         observer.error({
-          message: 'Usuário ou senha incorretos, tente novamente',
+          message: 'Wrong User name or password, try again',
         });
 
         observer.next(false);
