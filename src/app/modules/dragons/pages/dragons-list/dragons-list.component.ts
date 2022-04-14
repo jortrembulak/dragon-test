@@ -44,13 +44,15 @@ export class DragonsListComponent implements OnInit {
   }
 
   delete(id: string): void {
-    this.dragonsService.delete(id).subscribe({
-      next: (ret) => {
-        alert('Ok, Dragon was removed');
-        this.removeFromList(id);
-      },
-      error: (err) => console.log(err),
-    });
+    if (confirm('Are you sure?')) {
+      this.dragonsService.delete(id).subscribe({
+        next: (ret) => {
+          alert('Ok, Dragon was removed');
+          this.removeFromList(id);
+        },
+        error: (err) => console.log(err),
+      });
+    }
   }
 
   logout() {
