@@ -1,16 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/auth/services/authentication.service';
 import { Dragons } from '../../models/dragons';
 import { DragonsService } from '../../services/dragons.service';
-
-import {
-  faTrashCan,
-  faPenToSquare,
-  faMagnifyingGlass,
-  faArrowRightFromBracket,
-  faPlus,
-} from '@fortawesome/free-solid-svg-icons';
-import { AuthenticationService } from 'src/app/auth/services/authentication.service';
 
 @Component({
   selector: 'app-dragons-list',
@@ -18,12 +10,6 @@ import { AuthenticationService } from 'src/app/auth/services/authentication.serv
   styleUrls: ['./dragons-list.component.scss'],
 })
 export class DragonsListComponent implements OnInit {
-  faTrashCan = faTrashCan;
-  faPlus = faPlus;
-  faPenToSquare = faPenToSquare;
-  faMagnifyingGlass = faMagnifyingGlass;
-  faArrowRightFromBracket = faArrowRightFromBracket;
-
   public dragons!: Dragons;
 
   constructor(

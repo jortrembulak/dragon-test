@@ -26,20 +26,11 @@ describe('DragonsInfoComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DragonsInfoComponent);
     component = fixture.componentInstance;
-    component.dragon = {};
 
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    component.dragon = {
-      id: '1',
-      name: 'Dragon 1',
-      type: 'type 1',
-      histories: [],
-      createdAt: new Date(),
-    };
-    fixture.detectChanges();
+  it.only('should create', () => {
     expect(component).toBeTruthy();
   });
 });

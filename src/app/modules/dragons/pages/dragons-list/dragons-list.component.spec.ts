@@ -1,14 +1,12 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-
-import { DragonsListComponent } from './dragons-list.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Routes } from '@angular/router';
-import { DragonsAddComponent } from '../dragons-add/dragons-add.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MockPipe } from 'ng-mocks';
 import { OrderByPipe } from 'src/app/shared/pipes/orderBy.pipe';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DragonsAddComponent } from '../dragons-add/dragons-add.component';
+import { DragonsListComponent } from './dragons-list.component';
 
 const routes: Routes = [
   { path: 'dragons/dragons-add', component: DragonsAddComponent },
@@ -21,7 +19,6 @@ describe('DragonsListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        FontAwesomeModule,
         HttpClientTestingModule,
         RouterTestingModule.withRoutes(routes),
       ],

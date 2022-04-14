@@ -8,12 +8,16 @@ import { Dragon } from '../../models/dragons';
   styleUrls: ['./dragons-info.component.scss'],
 })
 export class DragonsInfoComponent implements OnInit {
-  public dragon!: Dragon | any;
+  public dragon!: Dragon;
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
-    this.dragon = this.route.snapshot.data['dragons'];
+    this.getDragon();
+  }
+
+  getDragon() {
+    this.dragon = this.route.snapshot.data['dragons'] || {};
   }
 
   onCancel(): void {

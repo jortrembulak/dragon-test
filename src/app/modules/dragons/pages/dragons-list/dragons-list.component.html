@@ -1,9 +1,16 @@
 <div class="page-header">
   <p>Dragons - List</p>
   <div class="page-header__actions">
-    <button (click)="add()"><i class="fa-solid fa-plus"></i> Add</button>
+    <button (click)="add()">
+      <img src="../../../../../assets/img/icons/actions-add.svg" alt="Add" />
+      Add
+    </button>
     <button (click)="logout()">
-      <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+      <img
+        src="../../../../../assets/img/icons/actions-logout.svg"
+        alt="Logout"
+      />
+      Logout
     </button>
   </div>
 </div>
@@ -32,13 +39,22 @@
         <td>{{ row.type }}</td>
         <td class="table-action">
           <a (click)="view(row.id)">
-            <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+            <img
+              src="../../../../../assets/img/icons/actions-search.svg"
+              alt="View"
+            />
           </a>
           <a (click)="edit(row.id)">
-            <fa-icon [icon]="faPenToSquare"></fa-icon>
+            <img
+              src="../../../../../assets/img/icons/actions-open.svg"
+              alt="Edit"
+            />
           </a>
           <a (click)="delete(row.id)">
-            <fa-icon [icon]="faTrashCan"></fa-icon>
+            <img
+              src="../../../../../assets/img/icons/actions-delete.svg"
+              alt="delete"
+            />
           </a>
         </td>
       </tr>

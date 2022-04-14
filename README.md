@@ -1,15 +1,24 @@
 # DragonTest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+## Descrição da Aplicação
 
+Aplicação para gerenciar cadastro de Dragões.
+É possível adicionar, editar e remover registros contendo as informações de Nome e Tipo de Dragão.
 
-Username: Dragon
-Password: myDragon
+Para acessar, utilize os dados de login:
 
-## Development server
+Usuário: Dragon
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Senha: myDragon
 
-## Running unit tests
+## Build
 
-Run `ng test` to execute the unit tests via [Jest](https://jestjs.io/pt-BR/).
+Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) na versão 13.3.2.
+
+## Servidor de Desenvolvimento
+
+Execute `ng serve` para subir a aplicação. Abra `http://localhost:4200/` no navegador para visualizar a aplicação.
+
+## Rodando testes unitários
+
+Execute `ng test` para rodar os testes unitários via [Jest](https://jestjs.io/pt-BR/).
