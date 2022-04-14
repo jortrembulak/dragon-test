@@ -9,6 +9,7 @@ import { DragonsService } from './dragons.service';
 
 describe('Service: Dragons', () => {
   let httpMock: any;
+  const url = 'http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon';
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
@@ -56,9 +57,7 @@ describe('Service: Dragons', () => {
         expect(res).not.toBeNull();
       });
 
-      const req = httpMock.expectOne(
-        'http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon'
-      );
+      const req = httpMock.expectOne(`${url}`);
       req.flush(dragons);
 
       expect(req.request.method).toBe('GET');
@@ -82,9 +81,7 @@ describe('Service: Dragons', () => {
         expect(res).not.toBeNull();
       });
 
-      const req = httpMock.expectOne(
-        'http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/2'
-      );
+      const req = httpMock.expectOne(`${url}/2`);
       req.flush(dragon);
 
       expect(req.request.method).toBe('GET');
@@ -117,9 +114,7 @@ describe('Service: Dragons', () => {
         expect(res).not.toBeNull();
       });
 
-      const req = httpMock.expectOne(
-        'http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon'
-      );
+      const req = httpMock.expectOne(`${url}`);
       req.flush(dragon);
 
       expect(req.request.method).toBe('POST');
@@ -134,9 +129,7 @@ describe('Service: Dragons', () => {
         expect(res).not.toBeNull();
       });
 
-      const req = httpMock.expectOne(
-        'http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/1'
-      );
+      const req = httpMock.expectOne(`${url}/1`);
       req.flush(id);
 
       expect(req.request.method).toBe('DELETE');
