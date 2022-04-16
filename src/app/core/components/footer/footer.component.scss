@@ -1,0 +1,37 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: var(--color-dark);
+
+  span {
+    color: var(--color-white);
+    text-align: center;
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    color: var(--color-white);
+    text-align: center;
+
+    li {
+      margin-left: 1rem !important;
+
+      img {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}

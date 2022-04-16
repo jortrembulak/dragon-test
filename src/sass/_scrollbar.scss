@@ -1,7 +1,7 @@
 /* Scroll Bar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-gray-three);
+  scrollbar-color: var(--color-gray-five);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -16,7 +16,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: var(--color-gray-three);
+  background: var(--color-gray-five);
   border-radius: 2px;
   transform: rotate(90.19deg);
 }

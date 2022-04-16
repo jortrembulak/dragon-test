@@ -1,5 +1,24 @@
+<h1>Confira os dragões</h1>
+
+<section class="flex">
+  <!-- <ng-container *ngIf="dragons">
+    <tr *ngIf="dragons.length == 0">
+      <td [attr.colspan]="4" class="text-center">Nenhum registro encontrado</td>
+    </tr>
+  </ng-container> -->
+  <ng-container *ngFor="let row of dragons | orderBy: 'name'">
+    <div>
+      <app-cards
+        [cardText]="row.name"
+        [type]="row.type"
+        [img]="'../../../../../assets/img/dragao.png'"
+      ></app-cards>
+    </div>
+  </ng-container>
+</section>
+
+<!-- <p>Dragons - List</p>
 <div class="page-header">
-  <p>Dragons - List</p>
   <div class="page-header__actions">
     <button (click)="add()">
       <img src="../../../../../assets/img/icons/actions-add.svg" alt="Add" />
@@ -62,4 +81,4 @@
 
     <tr></tr>
   </tbody>
-</table>
+</table> -->

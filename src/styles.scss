@@ -1,22 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+// /* You can add global styles to this file, and also import other style files */
 @import "~sass/variables";
 @import "assets/css/reset.css";
 @import "~sass/scrollbar";
+@import "~sass/buttons";
+@import "~sass/tooltip";
+@import "~sass/container";
+@import "~sass/grid";
 
 body {
   font-family: var(--font-family-base);
   font-weight: normal;
 }
 
-button {
-  outline: none;
-  border: none;
-  border-radius: 6px;
-  background-color: var(--color-gray-five);
-  color: var(--color-white);
-  padding: 10px;
-  cursor: pointer;
-}
+// button {
+//   outline: none;
+//   border: none;
+//   border-radius: 6px;
+//   background-color: var(--color-gray-five);
+//   color: var(--color-white);
+//   padding: 10px;
+//   cursor: pointer;
+// }
 
 input[type="text"],
 input[type="password"],
@@ -30,34 +34,34 @@ select {
   box-sizing: border-box;
 }
 
-.invalid-feedback {
-  color: var(--color-error);
-  font-size: var(--font-size-xxs);
-}
+// .invalid-feedback {
+//   color: var(--color-error);
+//   font-size: var(--font-size-xxs);
+// }
 
-.container {
-  width: 100vw;
-  height: 100vh;
+// .container {
+//   // width: 100vw;
+//   height: 100vh;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
 
-  &__box {
-    width: 50%;
-    padding: 20px;
-    background: var(--color-gray-two);
+//   &__box {
+//     width: 50%;
+//     padding: 20px;
+//     background: var(--color-gray-two);
 
-    &__buttons {
-      margin-top: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-}
+//     &__buttons {
+//       margin-top: 15px;
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//     }
+//   }
+// }
 
-.text-center {
-  text-align: center;
-}
+// .text-center {
+//   text-align: center;
+// }

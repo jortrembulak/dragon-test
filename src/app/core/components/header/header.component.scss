@@ -1,0 +1,43 @@
+body,
+ul,
+li,
+p {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.header {
+  background-color: var(--color-dark) !important;
+  padding: 1rem !important;
+  color: var(--color-white);
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.text-end {
+  text-align: right !important;
+}
+
+.btn-new {
+  margin-right: 0.5rem !important;
+}
