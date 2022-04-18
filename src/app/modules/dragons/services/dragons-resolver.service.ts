@@ -26,7 +26,7 @@ export class DragonsResolverService {
 
     return this.dragonsService.getById(id).pipe(
       catchError(() => {
-        alert('Dragon not found');
+        alert('Dragão não encontrado');
         this.router.navigate(['/dragons/dragons-list']);
         return of(null);
       })
