@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { TestBed, async, inject } from '@angular/core/testing';
+import { inject, TestBed } from '@angular/core/testing';
 import { Routes } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { DragonsListComponent } from '../pages/dragons-list/dragons-list.component';
@@ -18,11 +18,14 @@ describe('Service: DragonsResolver', () => {
         RouterTestingModule.withRoutes(routes),
         HttpClientTestingModule,
       ],
-      providers: [DragonsResolverService]
+      providers: [DragonsResolverService],
     });
   });
 
-  it('should ...', inject([DragonsResolverService], (service: DragonsResolverService) => {
-    expect(service).toBeTruthy();
-  }));
+  it('should ...', inject(
+    [DragonsResolverService],
+    (service: DragonsResolverService) => {
+      expect(service).toBeTruthy();
+    }
+  ));
 });

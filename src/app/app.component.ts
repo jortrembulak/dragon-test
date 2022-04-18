@@ -11,6 +11,7 @@ export class AppComponent implements DoCheck {
 
   public title = 'Dragons';
   public displaymenu = false;
+
   ngDoCheck(): void {
     if (this.route.url == '/') {
       this.displaymenu = false;

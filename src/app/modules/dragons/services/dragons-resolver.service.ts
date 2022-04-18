@@ -4,8 +4,8 @@ import {
   Router,
   RouterStateSnapshot,
 } from '@angular/router';
-import { catchError, map, Observable, of } from 'rxjs';
-import { Dragon, Dragons } from '../models/dragons';
+import { catchError, Observable, of } from 'rxjs';
+import { Dragon } from '../models/dragons';
 import { DragonsService } from './dragons.service';
 
 @Injectable({

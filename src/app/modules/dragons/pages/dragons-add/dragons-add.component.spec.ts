@@ -1,14 +1,11 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
-import { DragonsAddComponent } from './dragons-add.component';
-import { RouterTestingModule } from '@angular/router/testing';
-import { Routes } from '@angular/router';
-import { DragonsListComponent } from '../dragons-list/dragons-list.component';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { Routes } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
+import { DragonsListComponent } from '../dragons-list/dragons-list.component';
+import { DragonsAddComponent } from './dragons-add.component';
 
 const routes: Routes = [
   { path: 'dragons/dragons-list', component: DragonsListComponent },

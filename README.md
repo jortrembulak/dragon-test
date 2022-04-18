@@ -22,3 +22,7 @@ Execute `ng serve` para subir a aplicação. Abra `http://localhost:4200/` no na
 ## Rodando testes unitários
 
 Execute `ng test` para rodar os testes unitários via [Jest](https://jestjs.io/pt-BR/).
+
+## Qualidade do código
+
+[![DeepScan grade](https://deepscan.io/api/teams/17464/projects/20823/branches/579073/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=17464&pid=20823&bid=579073)
