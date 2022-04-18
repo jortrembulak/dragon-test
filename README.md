@@ -7,9 +7,9 @@ Aplicação para gerenciar cadastro de Dragões.
 
 Para acessar, utilize os dados de login:
 
-Usuário: Dragon
+Usuário: dragao
 
-Senha: myDragon
+Senha: 12345
 
 ## Build
 
