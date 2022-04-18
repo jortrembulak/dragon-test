@@ -2,18 +2,35 @@
   <img src="{{ img }}" alt="" />
 
   <div class="card__body">
-    <p class="card-text">{{ cardText }}</p>
+    <p class="card__body__text">{{ data.name }}</p>
+    <p class="card__body__text">{{ data.type }}</p>
     <div class="card__body__actions">
       <div class="btn-group">
-        <button type="button" class="btn btn-primary" title="Ver">Ver</button>
-        <button type="button" class="btn btn-primary" title="Editar">
+        <button
+          type="button"
+          class="btn btn-primary"
+          title="Ver"
+          (click)="view(data.id)"
+        >
+          Ver
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          title="Editar"
+          (click)="edit(data.id)"
+        >
           Editar
         </button>
       </div>
-      <small class="text-muted">{{ type }}</small>
 
       <div class="btn-group">
-        <button type="button" class="btn btn-danger" title="Remover">
+        <button
+          type="button"
+          class="btn btn-danger"
+          title="Remover"
+          (click)="delete(data.id)"
+        >
           Remover
         </button>
       </div>

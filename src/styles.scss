@@ -1,4 +1,5 @@
 // /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap");
 @import "~sass/variables";
 @import "assets/css/reset.css";
 @import "~sass/scrollbar";
@@ -9,18 +10,8 @@
 
 body {
   font-family: var(--font-family-base);
-  font-weight: normal;
+  font-weight: var(--font-weight-regular);
 }
-
-// button {
-//   outline: none;
-//   border: none;
-//   border-radius: 6px;
-//   background-color: var(--color-gray-five);
-//   color: var(--color-white);
-//   padding: 10px;
-//   cursor: pointer;
-// }
 
 input[type="text"],
 input[type="password"],
@@ -29,39 +20,47 @@ select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid var(--color-gray-three);
+  border-radius: var(--border-radius-md);
   box-sizing: border-box;
 }
 
-// .invalid-feedback {
-//   color: var(--color-error);
-//   font-size: var(--font-size-xxs);
-// }
+.btn-mr {
+  margin-right: 0.5rem !important;
+}
 
-// .container {
-//   // width: 100vw;
-//   height: 100vh;
+.invalid-feedback {
+  color: var(--color-error);
+  font-size: var(--font-size-xxs);
+  margin-bottom: 15px;
+}
 
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   align-items: center;
+.input-invalid-feedback {
+  border-color: var(--color-error) !important;
+}
 
-//   &__box {
-//     width: 50%;
-//     padding: 20px;
-//     background: var(--color-gray-two);
+.text-center {
+  text-align: center;
+}
 
-//     &__buttons {
-//       margin-top: 15px;
-//       display: flex;
-//       justify-content: space-between;
-//       align-items: center;
-//     }
-//   }
-// }
+.page {
+  margin-bottom: 80px;
+  &__title {
+    text-align: center;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
 
-// .text-center {
-//   text-align: center;
-// }
+    p {
+      font-size: 1.25rem;
+      font-weight: var(--font-weight-light);
+    }
+  }
+  &__box {
+    margin: 15px;
+    &__buttons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}

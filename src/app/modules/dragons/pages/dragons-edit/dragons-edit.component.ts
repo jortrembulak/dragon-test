@@ -58,7 +58,7 @@ export class DragonsEditComponent implements OnInit {
 
     this.dragonsService.update(this.id, this.form.value).subscribe({
       next: () => {
-        alert('Ok, Dragon is updated');
+        alert('Ok, Seu dragão foi atualizado com sucesso');
         this.router.navigate(['dragons/dragons-list']);
       },
       error: (error) => {

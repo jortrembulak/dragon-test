@@ -1,8 +1,5 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
 import { CardsComponent } from './cards.component';
 
 describe('CardsComponent', () => {
@@ -11,14 +8,20 @@ describe('CardsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardsComponent ]
-    })
-    .compileComponents();
+      declarations: [CardsComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CardsComponent);
     component = fixture.componentInstance;
+    component.data = {
+      id: '1',
+      name: 'Dragon',
+      createdAt: new Date(),
+      histories: [],
+      type: 'Tipo 1',
+    };
     fixture.detectChanges();
   });
 

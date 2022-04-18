@@ -1,14 +1,57 @@
-.container {
-  background: url("https://d5y9g7a5.rocketcdn.me/wp-content/uploads/2019/03/dragoes-qual-a-origem-do-mito-e-suas-variacoes-pelo-mundo-1.jpg")
-    no-repeat;
-  background-size: cover;
-  &__box {
-    width: 25%;
-  }
-}
-
 img {
   margin-left: -25px;
   border: 0;
   -webkit-appearance: none;
+}
+
+.login {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  .box {
+    width: 390px;
+    background: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    padding: 77px 55px 33px;
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+    -o-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+
+    form {
+      width: 100%;
+
+      .title {
+        display: block;
+        font-family: var(--font-family-base);
+        font-size: var(--font-size-xl);
+        color: var(--color-gray-five);
+        line-height: 1.2;
+        text-align: center;
+        padding-bottom: 26px;
+
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .login {
+    .box {
+      border-radius: none;
+      box-shadow: none;
+      padding: 10px 20px;
+    }
+  }
 }

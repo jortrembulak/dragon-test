@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { User } from '../models/user';
 import { LocalStorageService } from './local-storage.service';
 
@@ -8,12 +8,6 @@ import { LocalStorageService } from './local-storage.service';
   providedIn: 'root',
 })
 export class AuthenticationService {
-  private loggedIn = new BehaviorSubject<boolean>(false);
-
-  get isLoggedIn() {
-    return this.loggedIn.asObservable();
-  }
-
   constructor(
     private localStorageService: LocalStorageService,
     private router: Router
@@ -25,7 +19,6 @@ export class AuthenticationService {
         this.setUser(user);
         observer.next({ message: 'Logado com Sucesso' });
 
-        this.loggedIn.next(true);
         return observer.complete();
       } else {
         observer.error({
@@ -33,7 +26,6 @@ export class AuthenticationService {
         });
 
         observer.next(false);
-        this.loggedIn.next(false);
 
         return observer.complete();
       }
@@ -51,6 +43,5 @@ export class AuthenticationService {
   logOut(): void {
     this.localStorageService.delete('user');
     this.router.navigate(['']);
-    this.loggedIn.next(false);
   }
 }

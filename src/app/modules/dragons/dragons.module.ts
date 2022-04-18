@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OrderByPipe } from 'src/app/shared/pipes/orderBy.pipe';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DragonsRoutingModule } from './dragons-routing.module';
@@ -15,6 +15,7 @@ import { DragonsListComponent } from './pages/dragons-list/dragons-list.componen
     DragonsRoutingModule,
     ReactiveFormsModule,
     SharedModule,
+    FormsModule,
   ],
   declarations: [
     DragonsListComponent,

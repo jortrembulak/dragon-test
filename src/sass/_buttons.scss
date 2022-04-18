@@ -1,8 +1,8 @@
 .btn {
   display: inline-block;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   line-height: 1.5;
-  color: #212529;
+  color: var(--color-dark);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -25,7 +25,7 @@
 }
 
 .btn:hover {
-  color: #212529;
+  color: var(--color-dark);
 }
 
 [type="button"]:not(:disabled),
@@ -60,7 +60,7 @@ button {
 /*Primary button*/
 
 .btn-primary {
-  color: #fff;
+  color: var(--color-white);
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
@@ -70,26 +70,26 @@ button {
 }
 
 .btn-primary.active {
-  color: #fff;
+  color: var(--color-white);
   background-color: #0a58ca;
   border-color: #0a53be;
 }
 
 .btn-primary.active:focus {
-  color: #fff;
+  color: var(--color-white);
   background-color: #b02a37;
   border-color: #a52834;
 }
 
 .btn-primary:focus {
-  color: #fff;
+  color: var(--color-white);
   background-color: #0b5ed7;
   border-color: #0a58ca;
   box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
 }
 
 .btn-primary:hover {
-  color: #fff !important;
+  color: var(--color-white) !important;
   background-color: #0b5ed7;
   border-color: #0a58ca;
 }
@@ -97,13 +97,13 @@ button {
 /*Button danger*/
 
 .btn-danger {
-  color: #fff;
+  color: var(--color-white);
   background-color: #dc3545;
   border-color: #dc3545;
 }
 
 .btn-danger:hover {
-  color: #fff !important;
+  color: var(--color-white) !important;
   background-color: #bb2d3b;
   border-color: #b02a37;
 }
@@ -113,7 +113,7 @@ button {
 }
 
 .btn-danger:focus {
-  color: #fff;
+  color: var(--color-white);
   background-color: #bb2d3b;
   border-color: #b02a37;
   box-shadow: 0 0 0 0.25rem rgb(225 83 97 / 50%) !important;
@@ -143,8 +143,8 @@ button {
 
 /*Outline Dark*/
 .btn-outline-dark {
-  color: #212529;
-  border-color: #212529;
+  color: var(--color-dark);
+  border-color: var(--color-dark);
 }
 
 .btn-outline-dark:active:focus {
@@ -152,9 +152,9 @@ button {
 }
 
 .btn-outline-dark:active {
-  color: #fff;
-  background-color: #212529;
-  border-color: #212529;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
 }
 
 .btn-outline-dark:focus {
@@ -162,9 +162,9 @@ button {
 }
 
 .btn-outline-dark:hover {
-  color: #fff;
-  background-color: #212529;
-  border-color: #212529;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
 }
 
 /* BTN GROUP*/

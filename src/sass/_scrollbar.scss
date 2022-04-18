@@ -11,13 +11,13 @@
 
 *::-webkit-scrollbar-track {
   background: var(--color-gray-one);
-  border-radius: 2px;
+  border-radius: var(--border-radius-sm);
   transform: rotate(90deg);
 }
 
 *::-webkit-scrollbar-thumb {
   background: var(--color-gray-five);
-  border-radius: 2px;
+  border-radius: var(--border-radius-sm);
   transform: rotate(90.19deg);
 }
 /*End ScrollBar */

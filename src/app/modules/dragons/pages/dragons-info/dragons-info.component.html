@@ -1,15 +1,41 @@
 <div class="container">
-  <div class="container__box">
-    <h1>Dragon's information</h1>
-    <ul>
-      <li>Id: {{ dragon.id }}</li>
-      <li>Name: {{ dragon.name }}</li>
-      <li>Type : {{ dragon.type }}</li>
-      <li>Created at: {{ dragon.createdAt | date: "dd/MM/yyyy HH:mm:ss" }}</li>
-    </ul>
-
-    <div class="container__box__buttons">
-      <button type="button" (click)="onCancel()">Back</button>
+  <main class="page">
+    <div class="page__title">
+      <p>Aqui está seu dragão!!</p>
     </div>
-  </div>
+
+    <div class="page__box">
+      <div>
+        <label for="id">Id:</label>
+        <input type="text" value="{{ dragon.id }}" [attr.disabled]="true" />
+      </div>
+      <div>
+        <label for="name">Nome:</label>
+        <input type="text" value="{{ dragon.name }}" [attr.disabled]="true" />
+      </div>
+      <div>
+        <label for="type">Tipo:</label>
+        <input type="text" value="{{ dragon.type }}" [attr.disabled]="true" />
+      </div>
+
+      <div>
+        <label for="type">Data de criação:</label>
+        <input
+          type="text"
+          [ngModel]="dragon.createdAt | date: 'dd/MM/yyyy hh:mm:ss'"
+          [attr.disabled]="true"
+        />
+      </div>
+
+      <div class="page__box__buttons">
+        <button
+          type="button"
+          (click)="onCancel()"
+          class="btn btn-outline-dark btn-mr"
+        >
+          Voltar
+        </button>
+      </div>
+    </div>
+  </main>
 </div>

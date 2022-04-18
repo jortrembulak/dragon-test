@@ -27,8 +27,14 @@ export class DragonsAddComponent implements OnInit {
 
   createForm(dragon?: Dragon): void {
     this.form = this.formBuilder.group({
-      name: [dragon?.name, Validators.required],
-      type: [dragon?.type, Validators.required],
+      name: [
+        dragon?.name,
+        Validators.compose([Validators.required, Validators.maxLength(50)]),
+      ],
+      type: [
+        dragon?.type,
+        Validators.compose([Validators.required, Validators.maxLength(50)]),
+      ],
     });
   }
 
@@ -41,7 +47,7 @@ export class DragonsAddComponent implements OnInit {
 
     this.dragonsService.insert(this.form.value).subscribe({
       next: () => {
-        alert('Ok, Dragon is inserted');
+        alert('Ok, Seu dragão foi incluído com sucesso');
         this.router.navigate(['dragons/dragons-list']);
       },
       error: (error) => {

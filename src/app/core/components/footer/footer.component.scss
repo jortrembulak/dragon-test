@@ -5,6 +5,10 @@
   align-items: center;
   padding: 20px;
   background: var(--color-dark);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 
   span {
     color: var(--color-white);
@@ -26,7 +30,7 @@
     text-align: center;
 
     li {
-      margin-left: 1rem !important;
+      margin-left: 5px !important;
 
       img {
         height: 24px;
