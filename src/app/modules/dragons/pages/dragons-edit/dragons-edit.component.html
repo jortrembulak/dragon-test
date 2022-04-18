@@ -1,37 +1,78 @@
 <div class="container">
-  <div class="container__box">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <div>
-        <label for="id">Id:</label>
-        <input type="text" formControlName="id" [attr.disabled]="true" />
-      </div>
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" formControlName="name" aria-required="true" />
+  <main class="page">
+    <div class="page__title">
+      <p>Aqui está seu dragão!!</p>
+      <p>Você não está satisfeito com as especificações?</p>
+      <p>Fique a vontade para alterar como desejar :)</p>
+    </div>
 
-        <div
-          *ngIf="submitted && form.controls['name'].errors"
-          class="invalid-feedback"
-        >
-          <div *ngIf="form.controls['name'].errors">* Name is required</div>
+    <div class="page__box">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="id">Id:</label>
+          <input type="text" formControlName="id" [attr.disabled]="true" />
         </div>
-      </div>
-      <div>
-        <label for="type">Type:</label>
-        <input type="text" formControlName="type" aria-required="true" />
+        <div>
+          <label for="name">Nome:</label>
+          <input
+            type="text"
+            formControlName="name"
+            aria-required="true"
+            [ngClass]="{
+              'input-invalid-feedback':
+                submitted && form.controls['name'].errors
+            }"
+          />
 
-        <div
-          *ngIf="submitted && form.controls['type'].errors"
-          class="invalid-feedback"
-        >
-          <div *ngIf="form.controls['type'].errors">*Type is required</div>
+          <div
+            *ngIf="submitted && form.controls['name'].errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="form.controls['name'].hasError('required')">
+              Nome é obrigatório
+            </div>
+            <div *ngIf="form.controls['name'].hasError('maxlength')">
+              Máximo de 50 caracteres
+            </div>
+          </div>
         </div>
-      </div>
+        <div>
+          <label for="type">Tipo:</label>
+          <input
+            type="text"
+            formControlName="type"
+            aria-required="true"
+            [ngClass]="{
+              'input-invalid-feedback':
+                submitted && form.controls['type'].errors
+            }"
+          />
 
-      <div class="container__box__buttons">
-        <button type="button" (click)="onCancel()">Cancel</button>
-        <button type="submit">Save</button>
-      </div>
-    </form>
-  </div>
+          <div
+            *ngIf="submitted && form.controls['type'].errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="form.controls['type'].hasError('required')">
+              Tipo é obrigatório
+            </div>
+
+            <div *ngIf="form.controls['type'].hasError('maxlength')">
+              Máximo de 50 caracteres
+            </div>
+          </div>
+        </div>
+
+        <div class="page__box__buttons">
+          <button
+            type="button"
+            (click)="onCancel()"
+            class="btn btn-outline-dark btn-mr"
+          >
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </main>
 </div>

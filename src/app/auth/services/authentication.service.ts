@@ -15,14 +15,14 @@ export class AuthenticationService {
 
   validateUser(user: User): Observable<any> {
     return new Observable((observer) => {
-      if (user.username == 'Dragon' && user.password == 'myDragon') {
+      if (user.username == 'dragao' && user.password == '12345') {
         this.setUser(user);
-        observer.next({ message: 'Logged with Success' });
+        observer.next({ message: 'Logado com Sucesso' });
 
         return observer.complete();
       } else {
         observer.error({
-          message: 'Wrong User name or password, try again',
+          message: 'Usuário ou senha incorretos, tente novamente',
         });
 
         observer.next(false);

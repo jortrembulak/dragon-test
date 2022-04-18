@@ -1,65 +1,29 @@
-<div class="page-header">
-  <p>Dragons - List</p>
-  <div class="page-header__actions">
-    <button (click)="add()">
-      <img src="../../../../../assets/img/icons/actions-add.svg" alt="Add" />
-      Add
-    </button>
-    <button (click)="logout()">
-      <img
-        src="../../../../../assets/img/icons/actions-logout.svg"
-        alt="Logout"
-      />
-      Logout
-    </button>
-  </div>
-</div>
-
-<table>
-  <thead>
-    <tr>
-      <th>Data de criação</th>
-      <th>Nome</th>
-      <th>Tipo</th>
-      <th colspan="3">Ações</th>
-    </tr>
-  </thead>
-  <tbody>
-    <ng-container *ngIf="dragons">
-      <tr *ngIf="dragons.length == 0">
-        <td [attr.colspan]="4" class="text-center">
-          Nenhum registro encontrado
-        </td>
-      </tr>
-    </ng-container>
+<section>
+  <ng-container *ngIf="dragons">
+    <h1 *ngIf="dragons.length > 0">
+      Confira os dragões que moram em nossa casa
+    </h1>
+    <div class="container" *ngIf="dragons.length == 0">
+      <h1>
+        Oh não.. Nenhum dragão encontrado.. <br />
+        Gostaria de cadastrar um ?
+      </h1>
+      <div class="add-new">
+        <button class="btn btn-primary" (click)="add()">Novo Dragão</button>
+      </div>
+    </div>
+  </ng-container>
+  <div class="flex">
     <ng-container *ngFor="let row of dragons | orderBy: 'name'">
-      <tr>
-        <td>{{ row.createdAt | date: "dd/MM/yyyy HH:mm:ss" }}</td>
-        <td>{{ row.name }}</td>
-        <td>{{ row.type }}</td>
-        <td class="table-action">
-          <a (click)="view(row.id)">
-            <img
-              src="../../../../../assets/img/icons/actions-search.svg"
-              alt="View"
-            />
-          </a>
-          <a (click)="edit(row.id)">
-            <img
-              src="../../../../../assets/img/icons/actions-open.svg"
-              alt="Edit"
-            />
-          </a>
-          <a (click)="delete(row.id)">
-            <img
-              src="../../../../../assets/img/icons/actions-delete.svg"
-              alt="delete"
-            />
-          </a>
-        </td>
-      </tr>
+      <div>
+        <app-cards
+          [data]="row"
+          [img]="'../../../../../assets/img/dragao.png'"
+          (eventView)="view($event)"
+          (eventEdit)="edit($event)"
+          (eventDelete)="delete($event)"
+        ></app-cards>
+      </div>
     </ng-container>
-
-    <tr></tr>
-  </tbody>
-</table>
+  </div>
+</section>

@@ -4,6 +4,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Routes } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MockPipe } from 'ng-mocks';
+import { CardsComponent } from 'src/app/shared/components/cards/cards.component';
 import { OrderByPipe } from 'src/app/shared/pipes/orderBy.pipe';
 import { DragonsAddComponent } from '../dragons-add/dragons-add.component';
 import { DragonsListComponent } from './dragons-list.component';
@@ -24,6 +25,7 @@ describe('DragonsListComponent', () => {
       ],
 
       declarations: [
+        CardsComponent,
         DragonsListComponent,
         MockPipe(OrderByPipe, (array: any, field: string) => ['']),
       ],

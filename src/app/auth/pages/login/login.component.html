@@ -1,33 +1,37 @@
-<div class="container">
-  <div class="container__box">
+<div class="login">
+  <div class="box">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <span class="title"> Bem Vindo </span>
+      <span class="title">
+        <img src="../../../../favicon.ico" alt="" />
+      </span>
       <div>
-        <label for="username">User name</label>
+        <label for="username"> Usuário</label>
         <input
           type="text"
           formControlName="username"
           autocomplete="username"
           aria-required="true"
-          placeholder="User name"
+          placeholder="Usuário"
         />
         <div
           *ngIf="submitted && loginForm.controls['username'].errors"
           class="invalid-feedback"
         >
           <div *ngIf="loginForm.controls['username'].errors">
-            User name is required
+            Usuário é obrigatório
           </div>
         </div>
       </div>
       <div>
-        <label for="password">Password</label>
+        <label for="password">Senha</label>
         <input
           type="{{ typeInput }}"
           formControlName="password"
           autocomplete="current-password"
           aria-required="true"
           class="icon"
-          placeholder="Password"
+          placeholder="Senha"
         />
         <img
           class="img-input"
@@ -40,15 +44,16 @@
           class="invalid-feedback"
         >
           <div *ngIf="loginForm.controls['password'].errors">
-            Password is required
+            Senha é obirgatória
           </div>
         </div>
       </div>
       <div *ngIf="showInvalidCredentials">
-        <p>{{ errorMessage }}</p>
+        <div class="invalid-feedback">{{ errorMessage }}</div>
       </div>
-      <div>
-        <button type="submit">Join</button>
+
+      <div class="page__box__buttons">
+        <button type="submit" class="btn btn-primary">Login</button>
       </div>
     </form>
   </div>

@@ -42,7 +42,7 @@ describe('LoginComponent', () => {
   });
 
   it('should login and redirect to list', () => {
-    const user: User = { username: 'Dragon', password: 'myDragon' };
+    const user: User = { username: 'dragao', password: '12345' };
     jest.spyOn(component['router'], 'navigate');
 
     component.loginForm.patchValue({ ...user });
@@ -65,7 +65,7 @@ describe('LoginComponent', () => {
     expect(component['router'].navigate).not.toHaveBeenCalled();
     expect(component.showInvalidCredentials).toBeTruthy();
     expect(component.errorMessage).toBe(
-      'Wrong User name or password, try again'
+      'Usuário ou senha incorretos, tente novamente'
     );
   });
 });

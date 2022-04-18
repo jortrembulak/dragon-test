@@ -1,6 +1,7 @@
 /* tslint:disable:no-unused-variable */
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 import { Routes } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { DragonsListComponent } from '../dragons-list/dragons-list.component';
@@ -18,6 +19,7 @@ describe('DragonsInfoComponent', () => {
       imports: [
         RouterTestingModule.withRoutes(routes),
         HttpClientTestingModule,
+        FormsModule,
       ],
       declarations: [DragonsInfoComponent],
     }).compileComponents();

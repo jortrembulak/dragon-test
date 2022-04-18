@@ -44,10 +44,10 @@ export class DragonsListComponent implements OnInit {
   }
 
   delete(id: string): void {
-    if (confirm('Are you sure?')) {
+    if (confirm('Tem certeza que deseja deletar o registro?')) {
       this.dragonsService.delete(id).subscribe({
         next: (ret) => {
-          alert('Ok, Dragon was removed');
+          alert('Ok, Dragão foi deletado com sucesso');
           this.removeFromList(id);
         },
         error: (err) => console.log(err),
